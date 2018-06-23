@@ -1,15 +1,14 @@
-package com.company;
+package com.blisse;
 
 import java.sql.*;
-import java.util.ArrayList;
 import java.util.HashMap;
 
 public class network {
 
-    static HashMap<String, PreparedStatement> preparedStatements = new HashMap<String, PreparedStatement>();
+    private static HashMap<String, PreparedStatement> preparedStatements = new HashMap<String, PreparedStatement>();
     private Connection connection;
     private static final String url = "jdbc:sqlite:users.db";
-    private static final String user = "root";
+    private static final String user = "";
     private static final String password = "";
 
 

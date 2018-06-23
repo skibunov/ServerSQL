@@ -1,10 +1,9 @@
-package com.company;
+package com.blisse;
 
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
 import java.net.Socket;
-import java.util.ArrayList;
 
 public class MonoThreadClientHandler implements Runnable {
 
@@ -17,7 +16,7 @@ public class MonoThreadClientHandler implements Runnable {
 
     @Override
     public void run() {
-
+        System.out.print("Connection accepted. Ip - "+clientDialog.getInetAddress()+":"+clientDialog.getLocalPort()+"\n");
         try {
 
             DataOutputStream out = new DataOutputStream(clientDialog.getOutputStream());
@@ -47,7 +46,7 @@ public class MonoThreadClientHandler implements Runnable {
 
             }
         }catch (IOException e){
-            e.printStackTrace();
+            System.out.print("Client Disconnect. Ip - "+clientDialog.getInetAddress()+":"+clientDialog.getLocalPort()+"\n");
         }
     }
 }

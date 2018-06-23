@@ -1,4 +1,4 @@
-package com.company;
+package com.blisse;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -27,7 +27,6 @@ public class MultiThreadServer {
 
 
                 executeIt.execute(new MonoThreadClientHandler(client));
-                System.out.print("Connection accepted. Ip - "+client.getInetAddress()+":"+server.getLocalPort()+"\n");
             }
 
             executeIt.shutdown();
